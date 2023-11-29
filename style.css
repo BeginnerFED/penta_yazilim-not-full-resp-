@@ -1,0 +1,291 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #EFFBFF;
+}
+
+.wrapper {
+    position: relative;
+    margin: 0px 5px;
+}
+
+.slider__hg {
+    height: 90vh !important;
+    top: -4.3rem;
+}
+
+#indicators-carousel {
+    position: relative;
+}
+
+
+.bg__img {
+    background-image: url('./img/slider__main.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+
+
+.slider__titles {
+    position: absolute;
+    width: 30rem;
+    top: 45%;
+    left: 10%;
+}
+
+.white__bg {
+    position: absolute;
+    width: 200px;
+    height: 40px;
+    bottom: -20px;
+    z-index: -10;
+    left: 0;
+    transform: translate(-22%, 0%);
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+}
+
+.menu__desktop {
+    z-index: 20;
+    height: 100%;
+    width: 95% !important;
+    margin-left: 2rem;
+}
+
+.menu__items {
+    margin-top: 1rem !important;
+}
+
+
+
+.nav__desktop {
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.slider__buttons {
+    margin-bottom: 4rem;
+}
+
+.slider__buttons button {
+    height: 8px !important;
+    width: 8px !important;
+}
+
+.product__bg {
+    z-index: -10;
+}
+
+.card__titles1 {
+    bottom: 7rem;
+}
+
+.card__titles2 {
+    bottom: 2rem;
+}
+
+.sector__vh {
+    height: 80vh;
+}
+
+#carousel {
+    margin-left: 20%;
+}
+
+.carousel__btn {
+    position: absolute;
+    right: 5rem;
+}
+
+.carousel__btn button {
+    top: -3rem;
+    margin-right: 1rem;
+}
+
+.corporate__bg {
+    width: 100%;
+    height: 100vh;
+    z-index: -10;
+}
+
+.corporate__boxes {
+    max-width: 1180px;
+}
+
+.corporate__titles {
+    max-width: 1000px;
+    padding-top: 5rem;
+    padding-left: 10rem;
+}
+
+.boxes {
+    max-width: 1180px;
+}
+
+.leftbox__title {
+    position: absolute;
+    bottom: 1.5rem;
+    margin-left: 0.6rem;
+}
+
+.box__top {
+    background-color: #DEF2FF !important;
+}
+
+.box__br__titles {
+    bottom: 3.5rem;
+
+}
+
+.footer ul li {
+    margin-top: 0.7rem;
+    cursor: pointer;
+}
+
+.footer__whole {
+    display: flex;
+    justify-content: center !important;
+}
+
+.footer__logo ul li {
+    cursor: pointer;
+}
+
+.maker {
+    width: 65%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+
+
+
+@media only screen and (max-width: 800px) {
+
+    .wrapper {
+        margin: 0;
+    }
+
+    .products {
+        margin: 0px 10px;
+    }
+
+
+    .text-5xl {
+        font-size: 2rem !important;
+    }
+
+    .slider__titles {
+        width: 20rem;
+    }
+
+    .slider__titles p {
+        font-size: 0.8rem;
+    }
+
+    .sectors {
+        margin: 2rem 0rem !important;
+    }
+
+    .products {
+        margin-top: 2rem;
+    }
+
+    .corporate__titles {
+        padding-left: 1rem;
+        width: 350px;
+    }
+
+    .corporate__titles p {
+        font-size: 1rem;
+    }
+
+    .box__mb h3 {
+        font-size: 0.8rem;
+    }
+
+    .box__edit {
+        padding: 0.5rem !important;
+        font-size: 0.5rem !important;
+    }
+
+    .box__logos span {
+        padding: 1rem !important;
+    }
+
+    .box__mb:first-child {
+        height: 15rem;
+    }
+
+    .box__mb a {
+        font-size: 0.6rem;
+        justify-content: center;
+        padding-left: 10px;
+    }
+
+    .footer__whole {
+        display: block !important;
+    }
+
+    .footer__rightside {
+        padding-top: 0 !important;
+    }
+
+    .card__titles1,
+    .card__titles2 {
+        margin-left: 0.9rem !important;
+    }
+
+    .sector__titles {
+        max-width: 200px !important;
+    }
+
+    .menu__desktop {
+        display: none;
+    }
+
+    nav {
+        background-color: #fff;
+        border-color: #e2e8f0;
+        background-color: #1a202c;
+        margin: 0 !important;
+        z-index: 99;
+    }
+
+    .slider__hg {
+        top: -5.5rem;
+    }
+
+    .slider__buttons {
+        margin-bottom: 5rem;
+    }
+
+    .nav__desktop {
+        margin: 0 !important;
+        width: 100% !important;
+    }
+
+    .menu__items span {
+        margin-left: 0 !important;
+        color: white !important;
+    }
+
+    .menu__items ul {
+        margin-left: 0 !important;
+    }
+
+
+}

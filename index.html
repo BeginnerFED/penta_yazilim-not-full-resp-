@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./style.css">
+
+  <!--tailwind-->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!--font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet" />
+
+  <title>Penta Yazılım Case</title>
+
+</head>
+
+<body class="font-[Poppins]">
+
+  <div class="wrapper">
+
+    <!--Header Start-->
+
+
+    <nav class="relative mx-20 nav__whole">
+      <img src="./img/MENU.png" class="absolute menu__desktop w-full mt-2" alt="">
+      <div class="flex flex-wrap items-center justify-between p-4 mx-20 nav__desktop ">
+        <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse logo__bg z-50 menu__items">
+          <span
+            class="self-center text-2xl font-semibold whitespace-nowrap font-bold tracking-widest text-blue-900 ml-20">LOGO</span>
+        </a>
+        <div class="flex items-center md:order-2 space-x-1 md:space-x-0 rtl:space-x-reverse z-50">
+          <div class="menu__items">
+            <button
+              class=" inline-flex items-center font-medium justify-center px-2 py-2 text-sm text-gray-900 dark:text-white rounded-full cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white bg-blue-900">
+              <svg width="13" height="11" viewBox="0 0 13 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M12.1245 7.4298C12.1245 8.61027 11.1641 9.56879 9.9849 9.56879H2.9651C1.78594 9.56879 0.825521 8.61 0.825521 7.4298V2.96428C0.825521 2.57033 0.933387 2.20041 1.12072 1.88264L4.54596 5.30692C5.05826 5.82072 5.74451 6.10382 6.47582 6.10382C7.20713 6.10382 7.89174 5.82072 8.40404 5.30692L11.8293 1.88264C12.0166 2.20014 12.1245 2.57006 12.1245 2.96428V7.42953V7.4298ZM9.9849 0.825291H2.9651C2.4782 0.825291 2.02871 0.990185 1.66906 1.26428L5.12872 4.72461C5.48672 5.08115 5.96489 5.2788 6.47582 5.2788C6.98675 5.2788 7.46328 5.08115 7.82128 4.72461L11.2809 1.26428C10.9213 0.990185 10.4718 0.825291 9.9849 0.825291ZM9.9849 0H2.9651C1.33045 0 0 1.33008 0 2.96428V7.42953C0 9.06537 1.33045 10.3938 2.9651 10.3938H9.9849C11.6196 10.3938 12.95 9.0651 12.95 7.42953V2.96428C12.95 1.33008 11.6196 0 9.9849 0Z"
+                  fill="white" />
+              </svg>
+            </button>
+
+            <button
+              class="inline-flex items-center font-medium justify-center px-2 py-2 text-sm text-gray-900 dark:text-white rounded-full cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white bg-blue-900">
+              <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M9.33113 13C6.83873 13 4.49534 12.0294 2.73295 10.267C0.970567 8.50467 0 6.16127 0 3.66887C0 2.68906 0.38147 1.76758 1.07453 1.07453C1.76758 0.38147 2.68877 0 3.66887 0C3.84588 0 4.00529 0.107712 4.07113 0.272313L5.68884 4.31687C5.73157 4.42343 5.73013 4.54269 5.68479 4.64839C5.63946 4.75408 5.55427 4.83724 5.44742 4.87998L3.70785 5.57593C3.84964 7.56066 5.43991 9.15065 7.42436 9.29244L8.12031 7.55258C8.16305 7.44602 8.24621 7.36055 8.3519 7.31521C8.4576 7.26987 8.57686 7.26843 8.68342 7.31116L12.728 8.92887C12.8923 8.99471 13.0003 9.15383 13.0003 9.33113C13.0003 10.3109 12.6188 11.2324 11.9258 11.9252C11.2327 12.6182 10.3112 12.9997 9.33142 12.9997L9.33113 13ZM3.38125 0.880759C2.74133 0.945444 2.1479 1.22613 1.68701 1.68701C1.15769 2.21634 0.86632 2.92008 0.86632 3.66858C0.86632 5.92967 1.74679 8.05533 3.34573 9.65427C4.94467 11.2532 7.07033 12.1337 9.33142 12.1337C10.0799 12.1337 10.7837 11.8423 11.3133 11.3127C11.7742 10.8518 12.0548 10.2584 12.1195 9.61846L8.76398 8.27625L8.11598 9.89626C8.05014 10.0606 7.89102 10.1686 7.71372 10.1686C5.02148 10.1686 2.83142 7.97852 2.83142 5.28686C2.83142 5.10985 2.93914 4.95015 3.10374 4.88431L4.72376 4.23631L3.38125 0.880759Z"
+                  fill="white" />
+              </svg>
+
+            </button>
+
+            <button
+              class="inline-flex items-center font-medium justify-center px-2 py-2 text-sm text-gray-900 dark:text-white rounded-full cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white bg-gray-300">
+              <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M10.8842 10.3266L8.97995 8.42628C10.8145 6.28596 10.5667 3.06371 8.42635 1.22915C6.28603 -0.605414 3.06377 -0.357567 1.22921 1.78275C-0.605353 3.92307 -0.357506 7.14533 1.78281 8.97989C3.69418 10.6184 6.51498 10.6184 8.42635 8.97989L10.3267 10.8841C10.4793 11.038 10.7279 11.0392 10.882 10.8864C10.8827 10.8856 10.8835 10.8849 10.8842 10.8841C11.0381 10.7315 11.0393 10.4829 10.8864 10.3288C10.8857 10.3281 10.8849 10.3273 10.8842 10.3266ZM5.10863 9.42749C2.72341 9.42749 0.789708 7.49379 0.789708 5.10857C0.789708 2.72335 2.72341 0.789647 5.10863 0.789647C7.49385 0.789647 9.42755 2.72335 9.42755 5.10857C9.42755 7.49379 7.49385 9.42749 5.10863 9.42749Z"
+                  fill="#042F4D" />
+              </svg>
+
+            </button>
+          </div>
+
+          <button type="button" data-dropdown-toggle="language-dropdown-menu"
+            class="inline-flex items-center font-medium justify-center px-4 py-2 text-sm text-gray-900 dark:text-white rounded-lg cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white menu__items">
+            <svg class="h-3.5 w-3.5 rounded-full me-2" viewBox="0 0 64 64" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M32 62C48.5685 62 62 48.5685 62 32C62 15.4315 48.5685 2 32 2C15.4315 2 2 15.4315 2 32C2 48.5685 15.4315 62 32 62Z"
+                fill="#ED4C5C" />
+              <path d="M41.3 39L41.4 33.6L36 32L41.4 30.4L41.3 25L44.6 29.3L50 27.7L46.7 32L50 36.3L44.6 34.7L41.3 39Z"
+                fill="white" />
+              <path
+                d="M33.2 44C26.6 44 21.3 38.6 21.3 32C21.3 25.4 26.6 20 33.2 20C35.7 20 38 20.8 40 22.1C37.3 19 33.3 17 28.8 17C20.6 17 14 23.7 14 32C14 40.3 20.6 47 28.8 47C33.3 47 37.3 45 40 41.9C38.1 43.2 35.8 44 33.2 44Z"
+                fill="white" />
+            </svg>
+            TR
+          </button>
+          <!-- Dropdown -->
+          <div
+            class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700"
+            id="language-dropdown-menu">
+            <ul class="py-2 font-medium" role="none">
+              <li>
+                <a href="#"
+                  class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white"
+                  role="menuitem">
+                  <div class="inline-flex items-center">
+                    <svg aria-hidden="true" class="h-3.5 w-3.5 rounded-full me-2" xmlns="http://www.w3.org/2000/svg"
+                      id="flag-icon-css-us" viewBox="0 0 512 512">
+                      <g fill-rule="evenodd">
+                        <g stroke-width="1pt">
+                          <path fill="#bd3d44"
+                            d="M0 0h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0z"
+                            transform="scale(3.9385)" />
+                          <path fill="#fff"
+                            d="M0 10h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0z"
+                            transform="scale(3.9385)" />
+                        </g>
+                        <path fill="#192f5d" d="M0 0h98.8v70H0z" transform="scale(3.9385)" />
+                        <path fill="#fff"
+                          d="M8.2 3l1 2.8H12L9.7 7.5l.9 2.7-2.4-1.7L6 10.2l.9-2.7-2.4-1.7h3zm16.5 0l.9 2.8h2.9l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8H45l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.4 0l1 2.8h2.8l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm16.5 0l.9 2.8h2.9l-2.4 1.7 1 2.7L74 8.5l-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8h2.9L92 7.5l1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm-74.1 7l.9 2.8h2.9l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.4 0l1 2.8h2.8l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm16.5 0l.9 2.8h2.9l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8h2.9l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7H65zm16.4 0l1 2.8H86l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm-74 7l.8 2.8h3l-2.4 1.7.9 2.7-2.4-1.7L6 24.2l.9-2.7-2.4-1.7h3zm16.4 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8H45l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.4 0l1 2.8h2.8l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm16.5 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8h2.9L92 21.5l1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm-74.1 7l.9 2.8h2.9l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.4 0l1 2.8h2.8l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm16.5 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8h2.9l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7H65zm16.4 0l1 2.8H86l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm-74 7l.8 2.8h3l-2.4 1.7.9 2.7-2.4-1.7L6 38.2l.9-2.7-2.4-1.7h3zm16.4 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8H45l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.4 0l1 2.8h2.8l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm16.5 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8h2.9L92 35.5l1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm-74.1 7l.9 2.8h2.9l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.4 0l1 2.8h2.8l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm16.5 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8h2.9l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7H65zm16.4 0l1 2.8H86l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm-74 7l.8 2.8h3l-2.4 1.7.9 2.7-2.4-1.7L6 52.2l.9-2.7-2.4-1.7h3zm16.4 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8H45l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.4 0l1 2.8h2.8l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm16.5 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8h2.9L92 49.5l1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm-74.1 7l.9 2.8h2.9l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.4 0l1 2.8h2.8l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm16.5 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8h2.9l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7H65zm16.4 0l1 2.8H86l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm-74 7l.8 2.8h3l-2.4 1.7.9 2.7-2.4-1.7L6 66.2l.9-2.7-2.4-1.7h3zm16.4 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8H45l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.4 0l1 2.8h2.8l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm16.5 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8h2.9L92 63.5l1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9z"
+                          transform="scale(3.9385)" />
+                      </g>
+                    </svg>
+                    English (US)
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#"
+                  class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white"
+                  role="menuitem">
+                  <div class="inline-flex items-center">
+                    <svg class="h-3.5 w-3.5 rounded-full me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                      id="flag-icon-css-de" viewBox="0 0 512 512">
+                      <path fill="#ffce00" d="M0 341.3h512V512H0z" />
+                      <path d="M0 0h512v170.7H0z" />
+                      <path fill="#d00" d="M0 170.7h512v170.6H0z" />
+                    </svg>
+                    Deutsch
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#"
+                  class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white"
+                  role="menuitem">
+                  <div class="inline-flex items-center">
+                    <svg class="h-3.5 w-3.5 rounded-full me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                      id="flag-icon-css-it" viewBox="0 0 512 512">
+                      <g fill-rule="evenodd" stroke-width="1pt">
+                        <path fill="#fff" d="M0 0h512v512H0z" />
+                        <path fill="#009246" d="M0 0h170.7v512H0z" />
+                        <path fill="#ce2b37" d="M341.3 0H512v512H341.3z" />
+                      </g>
+                    </svg>
+                    Italiano
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#"
+                  class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white"
+                  role="menuitem">
+                  <div class="inline-flex items-center">
+                    <svg class="h-3.5 w-3.5 rounded-full me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink" id="flag-icon-css-cn" viewBox="0 0 512 512">
+                      <defs>
+                        <path id="a" fill="#ffde00" d="M1-.3L-.7.8 0-1 .6.8-1-.3z" />
+                      </defs>
+                      <path fill="#de2910" d="M0 0h512v512H0z" />
+                      <use width="30" height="20" transform="matrix(76.8 0 0 76.8 128 128)" xlink:href="#a" />
+                      <use width="30" height="20" transform="rotate(-121 142.6 -47) scale(25.5827)" xlink:href="#a" />
+                      <use width="30" height="20" transform="rotate(-98.1 198 -82) scale(25.6)" xlink:href="#a" />
+                      <use width="30" height="20" transform="rotate(-74 272.4 -114) scale(25.6137)" xlink:href="#a" />
+                      <use width="30" height="20" transform="matrix(16 -19.968 19.968 16 256 230.4)" xlink:href="#a" />
+                    </svg>
+                    中文 (繁體)
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <button data-collapse-toggle="navbar-language" type="button"
+            class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+            aria-controls="navbar-language" aria-expanded="false">
+            <span class="sr-only">Open main menu</span>
+            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M1 1h15M1 7h15M1 13h15" />
+            </svg>
+          </button>
+        </div>
+        <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1 text-xs z-50 menu__items"
+          id="navbar-language">
+          <ul
+            class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 ml-20">
+            <li>
+              <a href="#groups"
+                class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                aria-current="page"> Ürün Gruplarımız</a>
+            </li>
+            <li>
+              <a href="#sectors"
+                class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Sektörlerimiz</a>
+            </li>
+            <li>
+              <a href="#corporate"
+                class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Kurumsal</a>
+            </li>
+            <li>
+              <a href="#footer"
+                class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Markalarımız</a>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+
+    <!--Header End-->
+
+    <!--Slider Start-->
+
+    <div id="indicators-carousel" class="relative w-full" data-carousel="slide">
+      <!-- Carousel wrapper -->
+      <div class="relative h-56 overflow-hidden rounded-lg md:h-96 slider__hg">
+        <!-- Item 1 -->
+        <div class="hidden duration-700 ease-in-out bg__img" data-carousel-item="active">
+          <div class="slider__titles ">
+            <h1 class="text-5xl text-white font-normal">Her zaman en <br> iyisine sahine olun.</h1>
+            <p class="text-base text-white font-light my-4">Dünya’nın her yerinde kusursuza yakın işçilik ve kaliteli
+              malzeme ile başarılı projeler yapıyoruz.</p>
+            <button type="button"
+              class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-light rounded-lg text-sm px-8 py-4 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Bizi
+              Tanıyın</button>
+          </div>
+        </div>
+        <!-- Item 2 -->
+        <div class="hidden duration-700 ease-in-out bg__img" data-carousel-item>
+          <div class="slider__titles ">
+            <h1 class="text-5xl text-white font-normal">Her zaman en <br> iyisine sahine olun.</h1>
+            <p class="text-base text-white font-light my-4">Dünya’nın her yerinde kusursuza yakın işçilik ve kaliteli
+              malzeme ile başarılı projeler yapıyoruz.</p>
+            <button type="button"
+              class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-light rounded-lg text-sm px-8 py-4 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Bizi
+              Tanıyın</button>
+          </div>
+        </div>
+        <!-- Item 3 -->
+        <div class="hidden duration-700 ease-in-out bg__img" data-carousel-item>
+          <div class="slider__titles ">
+            <h1 class="text-5xl text-white font-normal">Her zaman en <br> iyisine sahine olun.</h1>
+            <p class="text-base text-white font-light my-4">Dünya’nın her yerinde kusursuza yakın işçilik ve kaliteli
+              malzeme ile başarılı projeler yapıyoruz.</p>
+            <button type="button"
+              class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-light rounded-lg text-sm px-8 py-4 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Bizi
+              Tanıyın</button>
+          </div>
+        </div>
+        <!-- Item 4 -->
+        <div class="hidden duration-700 ease-in-out bg__img" data-carousel-item>
+          <div class="slider__titles ">
+            <h1 class="text-5xl text-white font-normal">Her zaman en <br> iyisine sahine olun.</h1>
+            <p class="text-base text-white font-light my-4">Dünya’nın her yerinde kusursuza yakın işçilik ve kaliteli
+              malzeme ile başarılı projeler yapıyoruz.</p>
+            <button type="button"
+              class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-light rounded-lg text-sm px-8 py-4 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Bizi
+              Tanıyın</button>
+          </div>
+        </div>
+        <!-- Item 5 -->
+        <div class="hidden duration-700 ease-in-out bg__img" data-carousel-item>
+          <div class="slider__titles ">
+            <h1 class="text-5xl text-white font-normal">Her zaman en <br> iyisine sahine olun.</h1>
+            <p class="text-base text-white font-light my-4">Dünya’nın her yerinde kusursuza yakın işçilik ve kaliteli
+              malzeme ile başarılı projeler yapıyoruz.</p>
+            <button type="button"
+              class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-light rounded-lg text-sm px-8 py-4 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Bizi
+              Tanıyın</button>
+          </div>
+        </div>
+      </div>
+      <!-- Slider indicators -->
+      <div class="absolute z-30 flex -translate-x-1/2 space-x-3 rtl:space-x-reverse bottom-2 left-1/2 slider__buttons">
+
+        <div class="white__bg">
+          <img src="./img/slider__diktortgen.png" alt="">
+        </div>
+
+        <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1"
+          data-carousel-slide-to="0"></button>
+        <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2"
+          data-carousel-slide-to="1"></button>
+        <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3"
+          data-carousel-slide-to="2"></button>
+        <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 4"
+          data-carousel-slide-to="3"></button>
+        <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 5"
+          data-carousel-slide-to="4"></button>
+
+      </div>
+      <!-- Slider controls -->
+
+    </div>
+
+  </div>
+  <!--Slider End-->
+
+  <!-- Products Start -->
+  <div class="products relative py-5" id="groups">
+    <div class="products__titles text-center">
+      <h6 class="text-blue-600 tracking-widest">ÜRÜN GRUBUMUZ</h6>
+      <h1 class="text-2xl font-bold text-gray-700">Kusursuz teknoloji ile üretilen <br> ürünlerimizi keşfedin.</h1>
+    </div>
+    <div>
+      <img class="absolute product__bg" src="./img/product__bg.png" alt="">
+    </div>
+    <div class="products__cards flex justify-center gap-x-6 mt-16">
+
+
+      <div class="max-w-sm rounded-lg relative ">
+
+        <img class="rounded-t-lg" src="./img/card1.png" alt="" />
+        <div class="absolute card__titles1 ml-10">
+          <h5
+            class="mb-2 text-2xl font-normal tracking-tight text-gray-900 dark:text-white border-l-4 border-blue-400 pl-2">
+            Endüstriyel
+            <br>Ekipmanlar
+          </h5>
+          <p class="mb-3 text-xs text-gray-700 text-white">En iyi üretim performasına <br> hazır olun.</p>
+        </div>
+      </div>
+
+      <div class="max-w-sm rounded-lg relative mt-20">
+
+        <img class="rounded-t-lg" src="./img/card2.png" alt="" />
+        <div class="absolute ml-10 card__titles2">
+          <h5
+            class="mb-2 text-2xl font-normal tracking-tight text-gray-900 dark:text-white border-l-4 border-blue-400 pl-2">
+            Birleştirme
+            <br>Çözümleri
+          </h5>
+          <p class="mb-3 text-xs text-gray-700 text-white">Otomasyon ile en iyi <br> performansa erişin.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Products End -->
+
+  <!--Sectors Start-->
+  <section class="relative mt-20 bg-gray-200 ml-10 rounded-lg sectors" id="sectors">
+    <div class="sector__vh">
+      <div class="sector__titles pt-10 mx-20">
+        <h6 class="text-blue-600 tracking-widest my-4">SEKTÖRLERİMİZ</h6>
+        <h1 class="text-2xl font-normal text-gray-700">Üretim'in her aşamasında var olmaktan gururluyuz...</h1>
+      </div>
+
+      <div class="container mx-auto mt-8">
+        <div class="relative">
+          <div class="carousel__btn">
+            <button class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white text-blue-900 p-2 rounded-full "
+              id="prevBtn">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+              </svg>
+            </button>
+            <button class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white text-blue-900 p-2 rounded-full"
+              id="nextBtn">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+              </svg>
+            </button>
+          </div>
+
+          <div class="flex overflow-hidden">
+            <div class="flex transition-transform ease-in-out duration-300 transform translate-x-0" id="carousel">
+              <!-- Card-->
+              <div class="w-64 bg-white shadow-lg mx-2 relative rounded-lg">
+                <div class="p-4">
+                  <span class="text-xs bg-gray-200 rounded-full py-1 px-2 text-blue-900">23 Ürün</span>
+                  <h6 class="text-base text-blue-600 font-semibold py-2">Otomotiv</h6>
+                  <p class="text-xs text-gray-600 py-1">Fabrika kurulumu, akıllı robot kolları ve daha bir çok konuda
+                  </p>
+                  <a href="#" class="text-xs font-semibold flex items-center">Ürünlere git <svg class="mx-2" width="13"
+                      height="9" viewBox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M1 3.95C0.696243 3.95 0.45 4.19624 0.45 4.5C0.45 4.80376 0.696243 5.05 1 5.05L1 3.95ZM12.3889 4.88891C12.6037 4.67412 12.6037 4.32588 12.3889 4.11109L8.88873 0.610912C8.67394 0.396124 8.3257 0.396124 8.11091 0.610912C7.89612 0.8257 7.89612 1.17394 8.11091 1.38873L11.2222 4.5L8.11091 7.61127C7.89612 7.82606 7.89612 8.1743 8.11091 8.38909C8.3257 8.60387 8.67394 8.60387 8.88873 8.38909L12.3889 4.88891ZM1 5.05L12 5.05L12 3.95L1 3.95L1 5.05Z"
+                        fill="#2DBFFF" />
+                    </svg>
+                  </a>
+                </div>
+                <img class="p-1" src="./img/carousel__card1.png" alt="">
+              </div>
+              <!-- Card End-->
+
+              <!-- Card-->
+              <div class="w-64 bg-white shadow-lg mx-2 relative rounded-lg">
+                <div class="p-4">
+                  <span class="text-xs bg-gray-200 rounded-full py-1 px-2 text-blue-900">23 Ürün</span>
+                  <h6 class="text-base text-blue-600 font-semibold py-2">İnşaat</h6>
+                  <p class="text-xs text-gray-600 py-1">Fabrika kurulumu, akıllı robot kolları ve daha bir çok konuda
+                  </p>
+                  <a href="#" class="text-xs font-semibold flex items-center">Ürünlere git <svg class="mx-2" width="13"
+                      height="9" viewBox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M1 3.95C0.696243 3.95 0.45 4.19624 0.45 4.5C0.45 4.80376 0.696243 5.05 1 5.05L1 3.95ZM12.3889 4.88891C12.6037 4.67412 12.6037 4.32588 12.3889 4.11109L8.88873 0.610912C8.67394 0.396124 8.3257 0.396124 8.11091 0.610912C7.89612 0.8257 7.89612 1.17394 8.11091 1.38873L11.2222 4.5L8.11091 7.61127C7.89612 7.82606 7.89612 8.1743 8.11091 8.38909C8.3257 8.60387 8.67394 8.60387 8.88873 8.38909L12.3889 4.88891ZM1 5.05L12 5.05L12 3.95L1 3.95L1 5.05Z"
+                        fill="#2DBFFF" />
+                    </svg>
+                  </a>
+                </div>
+                <img class="p-1" src="./img/carousel__card2.png" alt="">
+              </div>
+              <!-- Card End-->
+
+              <!-- Card-->
+              <div class="w-64 bg-white shadow-lg mx-2 relative rounded-lg">
+                <div class="p-4">
+                  <span class="text-xs bg-gray-200 rounded-full py-1 px-2 text-blue-900">23 Ürün</span>
+                  <h6 class="text-base text-blue-600 font-semibold py-2">Madencilik</h6>
+                  <p class="text-xs text-gray-600 py-1">Fabrika kurulumu, akıllı robot kolları ve daha bir çok konuda
+                  </p>
+                  <a href="#" class="text-xs font-semibold flex items-center">Ürünlere git <svg class="mx-2" width="13"
+                      height="9" viewBox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M1 3.95C0.696243 3.95 0.45 4.19624 0.45 4.5C0.45 4.80376 0.696243 5.05 1 5.05L1 3.95ZM12.3889 4.88891C12.6037 4.67412 12.6037 4.32588 12.3889 4.11109L8.88873 0.610912C8.67394 0.396124 8.3257 0.396124 8.11091 0.610912C7.89612 0.8257 7.89612 1.17394 8.11091 1.38873L11.2222 4.5L8.11091 7.61127C7.89612 7.82606 7.89612 8.1743 8.11091 8.38909C8.3257 8.60387 8.67394 8.60387 8.88873 8.38909L12.3889 4.88891ZM1 5.05L12 5.05L12 3.95L1 3.95L1 5.05Z"
+                        fill="#2DBFFF" />
+                    </svg>
+                  </a>
+                </div>
+                <img class="p-1" src="./img/carousel__card3.png" alt="">
+              </div>
+              <!-- Card End-->
+
+              <!-- Card-->
+              <div class="w-64 bg-white shadow-lg mx-2 relative rounded-lg">
+                <div class="p-4">
+                  <span class="text-xs bg-gray-200 rounded-full py-1 px-2 text-blue-900">23 Ürün</span>
+                  <h6 class="text-base text-blue-600 font-semibold py-2">Demir Çelik</h6>
+                  <p class="text-xs text-gray-600 py-1">Fabrika kurulumu, akıllı robot kolları ve daha bir çok konuda
+                  </p>
+                  <a href="#" class="text-xs font-semibold flex items-center">Ürünlere git <svg class="mx-2" width="13"
+                      height="9" viewBox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M1 3.95C0.696243 3.95 0.45 4.19624 0.45 4.5C0.45 4.80376 0.696243 5.05 1 5.05L1 3.95ZM12.3889 4.88891C12.6037 4.67412 12.6037 4.32588 12.3889 4.11109L8.88873 0.610912C8.67394 0.396124 8.3257 0.396124 8.11091 0.610912C7.89612 0.8257 7.89612 1.17394 8.11091 1.38873L11.2222 4.5L8.11091 7.61127C7.89612 7.82606 7.89612 8.1743 8.11091 8.38909C8.3257 8.60387 8.67394 8.60387 8.88873 8.38909L12.3889 4.88891ZM1 5.05L12 5.05L12 3.95L1 3.95L1 5.05Z"
+                        fill="#2DBFFF" />
+                    </svg>
+                  </a>
+                </div>
+                <img class="p-1" src="./img/carousel__card4.png" alt="">
+              </div>
+              <!-- Card End-->
+
+              <!-- Card-->
+              <div class="w-64 bg-white shadow-lg mx-2 relative rounded-lg">
+                <div class="p-4">
+                  <span class="text-xs bg-gray-200 rounded-full py-1 px-2 text-blue-900">23 Ürün</span>
+                  <h6 class="text-base text-blue-600 font-semibold py-2">Fabrika Otomasyon</h6>
+                  <p class="text-xs text-gray-600 py-1">Fabrika kurulumu, akıllı robot kolları ve daha bir çok konuda
+                  </p>
+                  <a href="#" class="text-xs font-semibold flex items-center">Ürünlere git <svg class="mx-2" width="13"
+                      height="9" viewBox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M1 3.95C0.696243 3.95 0.45 4.19624 0.45 4.5C0.45 4.80376 0.696243 5.05 1 5.05L1 3.95ZM12.3889 4.88891C12.6037 4.67412 12.6037 4.32588 12.3889 4.11109L8.88873 0.610912C8.67394 0.396124 8.3257 0.396124 8.11091 0.610912C7.89612 0.8257 7.89612 1.17394 8.11091 1.38873L11.2222 4.5L8.11091 7.61127C7.89612 7.82606 7.89612 8.1743 8.11091 8.38909C8.3257 8.60387 8.67394 8.60387 8.88873 8.38909L12.3889 4.88891ZM1 5.05L12 5.05L12 3.95L1 3.95L1 5.05Z"
+                        fill="#2DBFFF" />
+                    </svg>
+                  </a>
+                </div>
+                <img class="p-1" src="./img/carousel__card5.png" alt="">
+              </div>
+              <!-- Card End-->
+
+              <!-- Card-->
+              <div class="w-64 bg-white shadow-lg mx-2 relative rounded-lg">
+                <div class="p-4">
+                  <span class="text-xs bg-gray-200 rounded-full py-1 px-2 text-blue-900">23 Ürün</span>
+                  <h6 class="text-base text-blue-600 font-semibold py-2">Madencilik</h6>
+                  <p class="text-xs text-gray-600 py-1">Fabrika kurulumu, akıllı robot kolları ve daha bir çok konuda
+                  </p>
+                  <a href="#" class="text-xs font-semibold flex items-center">Ürünlere git <svg class="mx-2" width="13"
+                      height="9" viewBox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M1 3.95C0.696243 3.95 0.45 4.19624 0.45 4.5C0.45 4.80376 0.696243 5.05 1 5.05L1 3.95ZM12.3889 4.88891C12.6037 4.67412 12.6037 4.32588 12.3889 4.11109L8.88873 0.610912C8.67394 0.396124 8.3257 0.396124 8.11091 0.610912C7.89612 0.8257 7.89612 1.17394 8.11091 1.38873L11.2222 4.5L8.11091 7.61127C7.89612 7.82606 7.89612 8.1743 8.11091 8.38909C8.3257 8.60387 8.67394 8.60387 8.88873 8.38909L12.3889 4.88891ZM1 5.05L12 5.05L12 3.95L1 3.95L1 5.05Z"
+                        fill="#2DBFFF" />
+                    </svg>
+                  </a>
+                </div>
+                <img class="p-1" src="./img/carousel__card3.png" alt="">
+              </div>
+              <!-- Card End-->
+
+              <!-- Card-->
+              <div class="w-64 bg-white shadow-lg mx-2 relative rounded-lg">
+                <div class="p-4">
+                  <span class="text-xs bg-gray-200 rounded-full py-1 px-2 text-blue-900">23 Ürün</span>
+                  <h6 class="text-base text-blue-600 font-semibold py-2">Demir Çelik</h6>
+                  <p class="text-xs text-gray-600 py-1">Fabrika kurulumu, akıllı robot kolları ve daha bir çok konuda
+                  </p>
+                  <a href="#" class="text-xs font-semibold flex items-center">Ürünlere git <svg class="mx-2" width="13"
+                      height="9" viewBox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M1 3.95C0.696243 3.95 0.45 4.19624 0.45 4.5C0.45 4.80376 0.696243 5.05 1 5.05L1 3.95ZM12.3889 4.88891C12.6037 4.67412 12.6037 4.32588 12.3889 4.11109L8.88873 0.610912C8.67394 0.396124 8.3257 0.396124 8.11091 0.610912C7.89612 0.8257 7.89612 1.17394 8.11091 1.38873L11.2222 4.5L8.11091 7.61127C7.89612 7.82606 7.89612 8.1743 8.11091 8.38909C8.3257 8.60387 8.67394 8.60387 8.88873 8.38909L12.3889 4.88891ZM1 5.05L12 5.05L12 3.95L1 3.95L1 5.05Z"
+                        fill="#2DBFFF" />
+                    </svg>
+                  </a>
+                </div>
+                <img class="p-1" src="./img/carousel__card4.png" alt="">
+              </div>
+              <!-- Card End-->
+
+              <!-- Card-->
+              <div class="w-64 bg-white shadow-lg mx-2 relative rounded-lg">
+                <div class="p-4">
+                  <span class="text-xs bg-gray-200 rounded-full py-1 px-2 text-blue-900">23 Ürün</span>
+                  <h6 class="text-base text-blue-600 font-semibold py-2">Fabrika Otomasyon</h6>
+                  <p class="text-xs text-gray-600 py-1">Fabrika kurulumu, akıllı robot kolları ve daha bir çok konuda
+                  </p>
+                  <a href="#" class="text-xs font-semibold flex items-center">Ürünlere git <svg class="mx-2" width="13"
+                      height="9" viewBox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M1 3.95C0.696243 3.95 0.45 4.19624 0.45 4.5C0.45 4.80376 0.696243 5.05 1 5.05L1 3.95ZM12.3889 4.88891C12.6037 4.67412 12.6037 4.32588 12.3889 4.11109L8.88873 0.610912C8.67394 0.396124 8.3257 0.396124 8.11091 0.610912C7.89612 0.8257 7.89612 1.17394 8.11091 1.38873L11.2222 4.5L8.11091 7.61127C7.89612 7.82606 7.89612 8.1743 8.11091 8.38909C8.3257 8.60387 8.67394 8.60387 8.88873 8.38909L12.3889 4.88891ZM1 5.05L12 5.05L12 3.95L1 3.95L1 5.05Z"
+                        fill="#2DBFFF" />
+                    </svg>
+                  </a>
+                </div>
+                <img class="p-1" src="./img/carousel__card5.png" alt="">
+              </div>
+              <!-- Card End-->
+
+
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <!--Sectors End-->
+
+  <!--Corporate Start-->
+  <section class="corporate relative mx-2 mb-20" id="corporate">
+    <div>
+      <div class="relative corporate__img">
+        <img class="absolute corporate__bg" src="./img/corporate__bg.png" alt="">
+      </div>
+
+      <div class="corporate__titles text-white">
+        <h6 class="text-xs text-blue-400">KURUMSAL</h6>
+        <p class="text-2xl">Problemler'in analizinde deneyimli mühendis kadrosu ile kolaylıkla uygun ve alternatif
+          çözümler
+          sunuyoruz</p>
+      </div>
+      <center>
+        <div class="boxes">
+          <div class="container mx-auto mt-8 grid grid-cols-1 md:grid-cols-4 gap-4">
+            <!-- Sol taraftaki dikdörtgen -->
+            <div class="col-span-1 md:col-span-1 relative">
+              <img src="./img/box__left.png" alt="">
+              <div class="leftbox__title text-left">
+                <h3 class="text-white font-semibold text-2xl">LOGO</h3>
+                <h6 class="text-gray-200 text-xs">29 yıllık tecrübeyi tanıyın...</h6>
+              </div>
+            </div>
+
+            <!-- Sağ taraftaki bölge -->
+            <div class="col-span-1 md:col-span-3 flex flex-col gap-4">
+              <!-- Üstteki uzun banner -->
+              <div class="bg-green-500 h-20 md:h-40 box__top rounded-lg box__mb">
+                <div class="display flex justify-between mx-5 my-5">
+                  <div class="display flex items-center">
+                    <h3 class="text-base">Markalarımız</h3>
+                    <span
+                      class="text-xs ml-5 bg-gray-200 rounded-full p-2 border-blue-400 border-2 box__edit">Endüstriyel
+                      Ekipmanlar</span>
+                    <span class="text-xs ml-5 bg-gray-200 rounded-full p-2 box__edit">Birleştirme Çözümleri</span>
+                  </div>
+                  <div class="display flex">
+                    <a class="display flex items-center" href="#">Tümü <span class="ml-2"><svg width="13" height="9"
+                          viewBox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M1 3.95C0.696243 3.95 0.45 4.19624 0.45 4.5C0.45 4.80376 0.696243 5.05 1 5.05L1 3.95ZM12.3889 4.88891C12.6037 4.67412 12.6037 4.32588 12.3889 4.11109L8.88873 0.610912C8.67394 0.396124 8.3257 0.396124 8.11091 0.610912C7.89612 0.8257 7.89612 1.17394 8.11091 1.38873L11.2222 4.5L8.11091 7.61127C7.89612 7.82606 7.89612 8.1743 8.11091 8.38909C8.3257 8.60387 8.67394 8.60387 8.88873 8.38909L12.3889 4.88891ZM1 5.05L12 5.05L12 3.95L1 3.95L1 5.05Z"
+                            fill="#2DBFFF" />
+                        </svg>
+                      </span></a>
+                  </div>
+                </div>
+                <div>
+                  <div
+                    class="display flex justify-between flex-wrap mx-5 corporate__logo font-semibold text-blue-400 box__logos">
+                    <span class="bg-white px-10 py-5 rounded-lg">LOGO</span>
+                    <span class="bg-white px-10 py-5 rounded-lg text-blue-900">LOGO</span>
+                    <span class="bg-white px-10 py-5 rounded-lg">LOGO</span>
+                    <span class="bg-white px-10 py-5 rounded-lg">LOGO</span>
+                    <span class="bg-white px-10 py-5 rounded-lg">LOGO</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Altındaki 2 bölünmüş kutucuklar -->
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="col-span-1 md:col-span-1 bg-white rounded-lg">
+                  <div class="display flex p-1">
+                    <div>
+                      <img src="./img/box__bl.png" alt="">
+                    </div>
+                    <div class="text-left ml-5 display flex flex-col justify-between my-10">
+                      <h2 class="text-gray-900">Ailemize Katılın</h2>
+                      <p class="text-xs text-gray-400">Kariyer basamaklarını liderin sektörüyle ileriye doğru atmaya
+                        hazır olun.</p>
+                      <a href="#" class="text-sm text-blue-600 display flex items-center">İş İlanları <svg class="ml-2"
+                          width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M1.5 3.95C1.19624 3.95 0.95 4.19624 0.95 4.5C0.95 4.80376 1.19624 5.05 1.5 5.05L1.5 3.95ZM12.8889 4.88891C13.1037 4.67412 13.1037 4.32588 12.8889 4.11109L9.38873 0.610912C9.17394 0.396124 8.8257 0.396124 8.61091 0.610912C8.39612 0.8257 8.39612 1.17394 8.61091 1.38873L11.7222 4.5L8.61091 7.61127C8.39612 7.82606 8.39612 8.1743 8.61091 8.38909C8.8257 8.60387 9.17394 8.60387 9.38873 8.38909L12.8889 4.88891ZM1.5 5.05L12.5 5.05L12.5 3.95L1.5 3.95L1.5 5.05Z"
+                            fill="#2DBFFF" />
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-span-1 md:col-span-1">
+                  <div class="relative">
+                    <div class="box__br">
+                      <img src="./img/box__br.png" alt="">
+                    </div>
+                    <div class="absolute box__br__titles text-left display flex flex-col pl-4 text-white">
+                      <p class="text-xs w-40 mb-10">Güncel ürün ve marka dokümanlarımızı inceleyin.</p>
+                      <a href="" class="text-xs display flex items-center">Dökümanlarımız <svg class="ml-2" width="13"
+                          height="9" viewBox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M1 3.95C0.696243 3.95 0.45 4.19624 0.45 4.5C0.45 4.80376 0.696243 5.05 1 5.05L1 3.95ZM12.3889 4.88891C12.6037 4.67412 12.6037 4.32588 12.3889 4.11109L8.88873 0.610912C8.67394 0.396124 8.3257 0.396124 8.11091 0.610912C7.89612 0.8257 7.89612 1.17394 8.11091 1.38873L11.2222 4.5L8.11091 7.61127C7.89612 7.82606 7.89612 8.1743 8.11091 8.38909C8.3257 8.60387 8.67394 8.60387 8.88873 8.38909L12.3889 4.88891ZM1 5.05L12 5.05L12 3.95L1 3.95L1 5.05Z"
+                            fill="#B6E6FF" />
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </center>
+
+    </div>
+  </section>
+
+  <!--Corporate End-->
+
+  <!--Footer Start-->
+
+  <section class="footer bg-gray-200 mx-2 rounded-lg" id="footer">
+    <div class="footer__whole display flex justify-between">
+      <div class="footer__leftside display flex py-20 mx-10">
+        <div class="inner__leftside text-blue-600">
+          <h6 class="text-sm text-blue-900 font-bold border-b-2 border-indigo-500">Birleştirme Çözümleri</h6>
+          <ul class="text-xs">
+            <li>Isıl İşlem</li>
+            <li>Gergi Somunları</li>
+            <li>Somun Perçin</li>
+            <li>Pres</li>
+            <li>Kilitleme Pulları</li>
+            <li>Kaynak Tabancaları</li>
+            <li>Saplama Kaynak</li>
+            <li>Kombitech</li>
+            <li>Saplama Kaynak Otomasyonu</li>
+            <li>İdeal Kaynak Otomasyonu</li>
+            <li>Kaynak Kontrol Otomasyonu</li>
+            <li>Diş Boyu Sıvama</li>
+            <li>Expert Trafo</li>
+            <li>Elektrod Bileme</li>
+            <li>Attexor Clinching</li>
+          </ul>
+        </div>
+        <div class="inner__rightside text-blue-600 mx-20 ">
+          <div class="footer__left__topside">
+            <h6 class="text-sm text-blue-900 font-bold border-b-2 border-indigo-500">Endüstriyel Ekipmanlar</h6>
+            <ul class="text-xs">
+              <li>Demir Çelik Teknolojileri</li>
+              <li>Kontrol ve Ölçüm</li>
+              <li>Vana ve Gaz</li>
+              <li>Güç Aktarım</li>
+            </ul>
+          </div>
+          <div class="footer__left__bottomside mt-20">
+            <h6 class="text-sm text-blue-900 font-bold border-b-2 border-indigo-500">Sektörler</h6>
+            <ul class="text-xs">
+              <li>Otomotiv</li>
+              <li>İnşaat</li>
+              <li>Madencilik</li>
+              <li>Demir Çelik</li>
+              <li>Fabrika Otomasyon</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer__rightside py-20 mx-10">
+        <div class="footer__logo display flex justify-between gap-10">
+          <span class="text-3xl font-semibold text-blue-900">LOGO</span>
+          <ul class="display flex justify-center gap-4 ">
+            <li><svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M7.31655 0.00196392C3.17062 0.105859 -0.10055 3.58635 0.00236317 7.77185C0.0832236 10.8887 2.04593 13.6494 4.94955 14.7106C5.32445 14.8442 5.72875 14.6438 5.86107 14.2653C5.89047 14.1911 5.90517 14.1095 5.90517 14.0278L5.90517 10.2802L4.50849 10.2802C4.21445 10.2728 3.97922 10.0353 3.97187 9.73844L3.97187 8.42491C3.97187 8.12806 4.21445 7.88317 4.50849 7.88317L5.90517 7.88317L5.90517 6.00563C5.90517 3.97225 7.10338 2.85909 8.84555 2.85909C9.33071 2.85909 9.78647 2.88135 10.1246 2.90361C10.4039 2.92588 10.6245 3.16335 10.6245 3.44535L10.6245 4.5511C10.6245 4.84794 10.3819 5.08542 10.0879 5.09284L9.41157 5.09284C8.45595 5.09284 8.27953 5.56779 8.27953 6.25053L8.27953 7.89059L9.82323 7.89059C10.1173 7.89059 10.3525 8.13549 10.3525 8.43233C10.3525 8.45459 10.3525 8.47686 10.3451 8.49912L10.1761 9.80523C10.1393 10.0724 9.91879 10.2728 9.6468 10.2802L8.26482 10.2802L8.26482 14.2727C8.26482 14.6735 8.59562 15 8.99257 15C9.04403 15 9.08813 14.9926 9.13959 14.9852C13.19 14.0649 15.726 9.99818 14.8145 5.91658C14.0353 2.39156 10.8965 -0.0796681 7.31655 0.00196392Z"
+                  fill="#00598B" fill-opacity="0.37" />
+              </svg>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M0.301758 7.7632C0.301758 3.47566 3.77742 1.18961e-09 8.06496 2.6571e-09C12.3525 4.12459e-09 15.8282 3.47566 15.8282 7.7632C15.8282 12.0507 12.3525 15.5264 8.06496 15.5264C3.77742 15.5264 0.301758 12.0507 0.301758 7.7632ZM7.39704 8.68229L9.98314 12.4461L12.8076 12.4461L8.96708 6.85694L8.96734 6.85694L12.4985 2.7522L11.6617 2.7522L8.59564 6.31629L6.14679 2.7522L3.32234 2.7522L7.02548 8.14176L3.32234 12.4461L4.15921 12.4461L7.39704 8.68229ZM5.74614 3.38171L8.15538 6.82811L8.53057 7.36462L11.6624 11.8443L10.377 11.8443L7.82136 8.18893L7.82136 8.18868L7.44616 7.65204L4.46079 3.38171L5.74614 3.38171Z"
+                  fill="#00598B" fill-opacity="0.37" />
+              </svg>
+
+            </li>
+            <li>
+              <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.88733 9.04307L10.1153 7.75915L7.88733 6.47485L7.88733 9.04307Z" fill="#00598B"
+                  fill-opacity="0.37" />
+                <path
+                  d="M8.73837 2.65574e-09C4.45263 1.18887e-09 0.971403 3.48123 0.979139 7.76697C0.979139 12.0527 4.46037 15.5341 8.74611 15.5264C13.0319 15.5264 16.5053 12.0529 16.5053 7.75942C16.5053 3.47368 13.0241 4.12262e-09 8.73837 2.65574e-09ZM12.8462 9.83243C12.7456 10.2038 12.4594 10.49 12.0881 10.5905C10.9741 10.7221 9.86009 10.7762 8.73837 10.7685C7.61665 10.7839 6.50265 10.7222 5.38867 10.583C5.01734 10.4824 4.73112 10.1962 4.63056 9.82487C4.50678 9.1441 4.45264 8.45548 4.45264 7.76697C4.44491 7.07847 4.50678 6.39022 4.63056 5.70946C4.73112 5.33813 5.01734 5.05153 5.38867 4.95096C6.50265 4.81945 7.61665 4.76532 8.73837 4.77305C9.86009 4.75758 10.9741 4.81965 12.0881 4.9589C12.4594 5.05946 12.7456 5.34568 12.8462 5.71701C12.97 6.39778 13.0318 7.09396 13.0241 7.78246C13.0241 8.46323 12.9622 9.15166 12.8462 9.83243Z"
+                  fill="#00598B" fill-opacity="0.37" />
+              </svg>
+
+            </li>
+            <li>
+              <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M9.76675 0.00779143L5.24814 0.00779142C2.40447 -0.0385018 0.0595534 2.30702 1.84061e-09 5.24664L3.42405e-09 9.76023C0.0521092 12.7076 2.39702 15.0454 5.2407 14.9991L9.75931 14.9991C12.603 15.0531 14.9479 12.7076 15 9.76023L15 5.23893C14.9851 2.33017 12.6998 -0.0153554 9.90074 7.57088e-05C9.85608 0.00779125 9.81142 0.00779143 9.76675 0.00779143ZM10.727 7.53044C10.794 9.38989 9.39454 10.9561 7.59305 11.0256C5.79901 11.095 4.28784 9.6445 4.22084 7.77734C4.15385 5.91018 5.55335 4.35164 7.35484 4.2822C7.39206 4.2822 7.43672 4.2822 7.47395 4.2822C9.23077 4.24362 10.6898 5.68643 10.727 7.5073L10.727 7.53044ZM11.6948 4.2822C11.2481 4.27449 10.8983 3.88871 10.9057 3.42578C10.9132 2.96284 11.2854 2.60021 11.732 2.60793C12.1787 2.61564 12.5285 3.00142 12.5211 3.46435C12.5136 3.91185 12.1638 4.27449 11.732 4.2822L11.6948 4.2822Z"
+                  fill="#00598B" fill-opacity="0.37" />
+              </svg>
+
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M8 2.78419e-09C3.58292 1.24694e-09 1.25695e-09 3.58292 2.80653e-09 8C4.35611e-09 12.4171 3.58292 16 8 16C12.4171 16 16 12.4171 16 8C16 3.58292 12.4171 4.32144e-09 8 2.78419e-09ZM5.67229 12.0914L3.72592 12.0914L3.72592 6.2284L5.67229 6.2284L5.67229 12.0914ZM4.70308 5.42602L4.68719 5.42602C4.07547 5.42602 3.57498 4.92552 3.58292 4.30586C3.58292 3.69414 4.08342 3.19364 4.70308 3.20159C5.3148 3.20159 5.81529 3.70209 5.80735 4.32175C5.7994 4.93347 5.30685 5.42602 4.70308 5.42602ZM12.7031 12.0914L10.7567 12.0914L10.7567 8.95333C10.7567 8.16683 10.4707 7.62661 9.7716 7.62661C9.31877 7.62661 8.92155 7.91261 8.77061 8.34161C8.72294 8.49255 8.69911 8.65938 8.70705 8.81827L8.70705 12.0914L6.76068 12.0914C6.76068 12.0914 6.78451 6.77656 6.76068 6.2284L8.70705 6.2284L8.70705 7.05462C9.06455 6.42701 9.73982 6.06157 10.4628 6.0854C11.7418 6.0854 12.7031 6.91956 12.7031 8.72294L12.7031 12.0914Z"
+                  fill="#00598B" fill-opacity="0.37" />
+              </svg>
+
+            </li>
+          </ul>
+        </div>
+        <div class="mt-3">
+          <h1 class="text-blue-500 text-xl">Üretim, çözüm ve teknoloji</h1>
+          <div class="border__hard border-b-4 border-indigo-300"></div>
+          <div class="border__medium border-b-2 border-indigo-300 my-1"></div>
+          <div class="border__thin border border-indigo-300"></div>
+        </div>
+        <div class="contact pt-5">
+          <div class="display flex my-5">
+            <span class="mr-2"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M5.625 9.51562H3.77255C4.08548 5.25 7.65591 1.875 12 1.875C15.4375 1.875 18.5481 4.04016 19.7402 7.26277C19.9199 7.74834 20.4591 7.99636 20.9448 7.81678C21.4304 7.63711 21.6784 7.09786 21.4988 6.61223C20.7883 4.69148 19.526 3.04786 17.8485 1.85902C16.1324 0.642844 14.11 0 12 0C9.29555 0 6.75291 1.05319 4.84055 2.96555C2.95313 4.85297 1.90336 7.35441 1.87627 10.0194C0.755859 10.6686 0 11.8801 0 13.2656V16.4531C0 18.5209 1.68225 20.2031 3.75 20.2031H5.625C6.14278 20.2031 6.5625 19.7834 6.5625 19.2656V10.4531C6.5625 9.93534 6.14278 9.51562 5.625 9.51562ZM4.6875 18.3281H3.75C2.71613 18.3281 1.875 17.487 1.875 16.4531V13.2656C1.875 12.2318 2.71613 11.3906 3.75 11.3906H4.6875V18.3281Z"
+                  fill="#02A7F5" />
+                <path
+                  d="M20.25 9.51562H18.375C17.8572 9.51562 17.4375 9.93534 17.4375 10.4531V16.875V19.2656V20.25C17.4375 20.7669 17.0169 21.1875 16.5 21.1875H13.6406V21.2172C13.3208 20.6405 12.7061 20.25 12 20.25C10.9645 20.25 10.125 21.0895 10.125 22.125C10.125 23.1605 10.9645 24 12 24C12.7061 24 13.3208 23.6095 13.6406 23.0328V23.0625H16.5C18.0508 23.0625 19.3125 21.8008 19.3125 20.25V20.2031H20.25C22.3177 20.2031 24 18.5209 24 16.4531V13.2656C24 11.1979 22.3177 9.51562 20.25 9.51562ZM22.125 16.4531C22.125 17.487 21.2839 18.3281 20.25 18.3281H19.3125V16.875V11.3906H20.25C21.2839 11.3906 22.125 12.2318 22.125 13.2656V16.4531Z"
+                  fill="#02A7F5" />
+              </svg>
+            </span>
+            <h1 class="text-xl text-gray-600">1230 123 12 12 <span class="text-xs">(pbx)</span></h1>
+          </div>
+          <div class="working__hours display flex">
+            <div>
+              <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_2_305)">
+                  <path
+                    d="M12.5 25C19.3917 25 25 19.3917 25 12.5C25 5.60835 19.3917 0 12.5 0C5.60828 0 0 5.60835 0 12.5C0 19.3917 5.60835 25 12.5 25ZM12.5 1.66664C18.475 1.66664 23.3334 6.52495 23.3334 12.5C23.3334 18.475 18.475 23.3334 12.5 23.3334C6.52495 23.3334 1.66664 18.475 1.66664 12.5C1.66664 6.52495 6.52502 1.66664 12.5 1.66664Z"
+                    fill="#02A7F5" />
+                  <path
+                    d="M16.1458 16.4833C16.3 16.6083 16.4833 16.6667 16.6667 16.6667C16.9125 16.6667 17.1542 16.5583 17.3166 16.3542C17.6042 15.9958 17.5458 15.4708 17.1875 15.1833L13.3333 12.1V5.83332C13.3333 5.37498 12.9583 5 12.5 5C12.0417 5 11.6667 5.37498 11.6667 5.83332V12.5C11.6667 12.7542 11.7834 12.9917 11.9792 13.15L16.1458 16.4833Z"
+                    fill="#02A7F5" />
+                </g>
+                <defs>
+                  <clipPath id="clip0_2_305">
+                    <rect width="25" height="25" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </div>
+            <div class="text-xs text-gray-500 mx-3">
+              <h6>Hafta içi</h6>
+              <h6>Cumartesi</h6>
+            </div>
+            <div class="text-xs font-semibold text-gray-700">
+              <h6>09:00 - 18:00</h6>
+              <h6>09:00 - 13:00</h6>
+            </div>
+          </div>
+
+          <div class="mt-5">
+            <h6 class="text-blue-500">Projeleriniz için buradayız.</h6>
+          </div>
+
+          <div class="adress text-xs mt-5 text-gray-400">
+            <h6>Adres</h6>
+            <h6>Alanı Lorem ipsum 123456</h6>
+            <h6>firma@mail.com.tr</h6>
+          </div>
+
+          <div class="mt-5 text-xs text-gray-400">
+            <a href="">Aydınlatma Metni | Çerez Politikası</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="maker border-t border-gray-300  p-4">
+      <div class="display flex justify-between">
+        <div class="text-xs">
+          <span>© 2023 Firma İsmi Tic. Ltd. Şti.</span>
+        </div>
+        <div><svg width="25" height="22" viewBox="0 0 25 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g opacity="0.26">
+              <g clip-path="url(#clip0_2_312)">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M3.00006 0C1.3432 0 0 1.29245 0 2.8867V21.6538H21.4782C23.1351 21.6538 24.4783 20.3614 24.4783 18.7671V0H3.00006ZM22.3996 19.6534H2.07897V2.00041H22.3996V19.6534Z"
+                  fill="#042F4D" />
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M6.38903 10.2111H20.6904V3.33984H3.72119V18.391H6.38903V10.2111ZM18.7052 5.49257V8.06618H6.38903V5.49257H18.7052Z"
+                  fill="#042F4D" />
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M17.5157 11.071L13.7053 14.2128L10.5209 11.1914H7.0733L14.1368 18.4127L18.1091 18.3911L15.4025 15.8231L20.6903 11.071H17.5157Z"
+                  fill="#042F4D" />
+              </g>
+            </g>
+            <defs>
+              <clipPath id="clip0_2_312">
+                <rect width="24.4783" height="21.6538" fill="white" />
+              </clipPath>
+            </defs>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--Footer End-->
+
+
+  <script>
+
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js"></script>
+
+  <script>
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const carousel = document.getElementById('carousel');
+
+    let currentIndex = 0;
+
+    nextBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % 2;
+      updateCarousel();
+    });
+
+    prevBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex - 1 + 2) % 2;
+      updateCarousel();
+    });
+
+    function updateCarousel() {
+      const translateValue = -currentIndex * 60;
+      carousel.style.transform = `translateX(${translateValue}%)`;
+    }
+  </script>
+
+
+
+</body>
+
+</html>
